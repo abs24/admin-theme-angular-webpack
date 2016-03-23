@@ -1,0 +1,62 @@
+<!doctype html>
+<html ng-app="app" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular webpack </title>
+	<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<base href="/">
+</head>
+<body>
+  <div class="wrapper" ng-controller="HomeController as homeControl">
+	<!-- Header start-->
+	<div class="header-wrapper clearfix header-fixed">
+		<div class="brand pull-left" ng-class="!homeControl.collapse?'side-full-mode':''">
+			<div><i class="material-icons">fingerprint</i></div>
+		</div>
+		<div class="pull-right profilo mobile-hide">
+			<i class="material-icons">account_circle</i>
+		</div>
+		<div class="mobile-show pull-right">
+		
+		</div>
+	</div>
+	<!-- container start -->
+	<div class="container-wrapper">
+		<!-- sidebar starts -->
+		<div class="sidbar-wrapper" ng-class="!homeControl.collapse?'side-full-mode':''">
+			<div class="sidebar-toggler" ng-click="homeControl.toggle()"><i class="material-icons">power_input</i></div>
+			<div class="navigation">
+			<ul>
+				<li ng-click="homeControl.gotopage(item)" ng-class="item.isSelected?'active':''" ng-repeat="item in homeControl.pages">
+					<a title="{{item.title}}" href="{{item.hash}}"/><i class="material-icons">{{item.icon}}</i>
+					
+					<span class="title" ng-hide="homeControl.collapse">{{item.title}}</span>
+					</a>
+				</li>	
+			</ul>
+				
+			
+			
+			</div>
+		</div>
+		<!-- sidebar ends -->
+		<!-- page content starts -->
+		<div class="page-content" ng-class="!homeControl.collapse?'side-full-mode':''">
+			<ui-view></ui-view>
+		</div>
+		<!-- page content ends -->
+	</div>
+	<!-- container end -->
+	<!-- Header end-->
+	<div class="footer">
+		
+	
+	</div>
+  </div>
+  
+  
+  
+</body>
+</html>

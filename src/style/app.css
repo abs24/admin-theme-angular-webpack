@@ -1,0 +1,155 @@
+/* styles in src/style directory are applied to the whole page */
+body {
+  background: #FBFCFE;
+  color: #282829;
+  margin:0;
+}
+a{
+	text-decoration:none;
+}
+a:hover
+{
+	text-decoration:none;
+}
+.clearfix:before,.clearfix:after
+{
+	clear:both !important;
+}
+.pull-right
+{
+	float:right !important;
+}
+.pull-left
+{
+	float:left !important;
+}
+.text-center
+{
+ text-align:center;
+}
+.wrapper
+{
+	
+}
+.header-wrapper
+{
+	height:60px;
+	position:fixed;
+	top:0;
+	left:0;
+	background:#FFF;
+	width:100%;
+	box-shadow: 1px 0px 20px #999;
+}
+.header-wrapper .brand
+{
+	background:#59CCBD;
+	width:75px;
+	height:60px;
+	box-shadow: 1px 0px 14px #e2e2e2;
+	text-align:center;
+	transition:all 0.5s ease;
+	-webkit-transition:all 0.5s ease;
+}
+.header-wrapper .brand div
+{
+	box-shadow: inset 0px 0px 64px -8px rgba(0,0,0,0.4);
+	width:100%;
+	height:100%;
+}
+.header-wrapper .brand i
+{
+	color: #FFF;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 35px;
+}
+.header-wrapper .brand.side-full-mode
+{
+	width:150px !important;
+}
+.header-wrapper .profilo
+{
+	padding:15px;
+
+}
+.header-wrapper .profilo i
+{
+	font-size:35px;
+}
+.sidbar-wrapper
+{
+	position:fixed;
+	top:60px;
+	left:0;
+	width:75px;
+	height:100%;
+	background:#273446;
+	transition:all 0.5s ease;
+	-webkit-transition:all 0.5s ease;
+	overflow:auto;
+
+}
+.sidbar-wrapper .navigation
+{
+	min-height:400px;
+}
+.sidbar-wrapper.side-full-mode
+{
+	width:150px !important;
+
+}
+.sidbar-wrapper .navigation ul
+{
+	padding:0;
+	margin:0;
+}
+.sidbar-wrapper .navigation li
+{
+	padding:0;
+	margin:0;
+	text-align:center;
+}
+.sidbar-wrapper .navigation li a
+{
+	display:block;
+	padding:25px 15px;
+	color:#e2e2e2;
+	text-decoration:none;
+}
+.sidbar-wrapper .navigation li a .title
+{
+	display:block;
+	text-decoration:none;
+	
+}
+.sidbar-wrapper .navigation li.active a
+{
+	color:#FFF;
+	box-shadow: inset 0 0 70px 10px #000;
+}
+.sidbar-wrapper .sidebar-toggler
+{
+	padding:0;
+	color:#fafafa;
+	text-align:center;
+	cursor:pointer;
+
+}
+.sidbar-wrapper .sidebar-toggler:hover,
+.sidbar-wrapper .navigation li:not(.active) a:hover
+{
+	    background: rgba(255,255,255,0.1);
+}
+.page-content
+{
+	padding-top:70px;
+	padding-left:85px;
+	transition:all 0.5s ease;
+	-webkit-transition:all 0.5s ease;
+}
+.page-content.side-full-mode
+{
+	padding-left:160px !important;
+}
+
