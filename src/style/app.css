@@ -11,7 +11,7 @@ a:hover
 {
 	text-decoration:none;
 }
-.clearfix:before,.clearfix:after
+.clearfix:before,.clearfix:after,.clear
 {
 	clear:both !important;
 }
@@ -70,8 +70,12 @@ a:hover
 }
 .header-wrapper .profilo
 {
-	padding:15px;
+	padding:0 15px;
 
+}
+.header-wrapper .profilo .md-button.md-icon-button
+{
+	    padding: 8px 3px !important;
 }
 .header-wrapper .profilo i
 {
@@ -87,12 +91,13 @@ a:hover
 	background:#273446;
 	transition:all 0.5s ease;
 	-webkit-transition:all 0.5s ease;
-	overflow:auto;
+	
 
 }
-.sidbar-wrapper .navigation
+.sidbar-wrapper .sidbar-inner-wrapper
 {
-	min-height:400px;
+	overflow:auto;
+	height:85%;
 }
 .sidbar-wrapper.side-full-mode
 {
@@ -143,13 +148,57 @@ a:hover
 }
 .page-content
 {
-	padding-top:70px;
+	padding-top:80px;
 	padding-left:85px;
+	padding-right:80px;
+	padding-bottom:20px;
 	transition:all 0.5s ease;
 	-webkit-transition:all 0.5s ease;
 }
 .page-content.side-full-mode
 {
 	padding-left:160px !important;
+}
+
+.m-light-grey
+{
+	background-color:#E0E0E0 !important;
+}
+.md-button
+{
+	border-radius:0 !important;
+}
+.md-button .fa
+{
+	margin-left:3px;
+}
+.badge
+{
+	padding: 0;
+    font-size: 12px;
+    text-align: center;
+    position: absolute;
+    top: 4px;
+    right: 0;
+    background: #E64A19;
+    border-radius: 50%;
+    color: #FFF;
+	width: 25px;
+}
+.badge:empty{
+	display:none;
+}
+.notification
+{
+	height:auto !important;
+}
+.notification .notification-item-icon
+{
+	flex:0 1 20%;
+}
+.notification .notification-title
+{
+	font-size:14px;
+	flex:0 4 80%;
 }
 

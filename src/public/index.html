@@ -6,6 +6,7 @@
 	<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<base href="/">
 </head>
 <body>
@@ -15,8 +16,52 @@
 		<div class="brand pull-left" ng-class="!homeControl.collapse?'side-full-mode':''">
 			<div><i class="material-icons">fingerprint</i></div>
 		</div>
-		<div class="pull-right profilo mobile-hide">
-			<i class="material-icons">account_circle</i>
+		<div class="pull-right profilo mobile-hide" >
+			
+			<md-menu md-position-mode="target-right bottom" md-offset="20 20">
+				<md-button aria-label="Open account menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
+					<i class="material-icons">notifications</i>
+					<div class="badge">{{homeControl.getNotificationCount()}}</div>
+				</md-button>
+				<md-menu-content width="4">
+					<md-menu-item class="notification" ng-repeat="item in homeControl.notification">
+						<div class="notification-item-icon">
+							<i class='material-icons'>{{item.icon}}</i>
+						</div>
+						<div class="notification-title">
+							{{item.title}}
+						</div>
+						
+						
+					</md-menu-item>
+				</md-menu-content>
+			</md-menu>
+			
+			
+			
+			<md-menu md-position-mode="target-right bottom" md-offset="20 20">
+				<md-button aria-label="Open account menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
+					<i  class="material-icons">account_circle</i>
+				</md-button>
+				<md-menu-content width="4">
+					<md-menu-item>
+						<md-button>
+							<a href="/account-settings">
+								Account settings
+							</a>
+						</md-button>
+					</md-menu-item>
+					 <md-menu-divider></md-menu-divider>
+					<md-menu-item>
+						<md-button>
+							<a href="/logout">
+								Logout
+							</a>
+						</md-button>
+					</md-menu-item>
+				</md-menu-content>
+			</md-menu>
+			
 		</div>
 		<div class="mobile-show pull-right">
 		
@@ -26,19 +71,18 @@
 	<div class="container-wrapper">
 		<!-- sidebar starts -->
 		<div class="sidbar-wrapper" ng-class="!homeControl.collapse?'side-full-mode':''">
-			<div class="sidebar-toggler" ng-click="homeControl.toggle()"><i class="material-icons">power_input</i></div>
-			<div class="navigation">
-			<ul>
-				<li ng-click="homeControl.gotopage(item)" ng-class="item.isSelected?'active':''" ng-repeat="item in homeControl.pages">
-					<a title="{{item.title}}" href="{{item.hash}}"/><i class="material-icons">{{item.icon}}</i>
-					
-					<span class="title" ng-hide="homeControl.collapse">{{item.title}}</span>
-					</a>
-				</li>	
-			</ul>
-				
-			
-			
+			<div class="sidbar-inner-wrapper">
+				<div class="sidebar-toggler" ng-click="homeControl.toggle()"><i class="material-icons">power_input</i></div>
+				<div class="navigation">
+					<ul>
+						<li ng-click="homeControl.gotopage(item)" ng-class="item.isSelected?'active':''" ng-repeat="item in homeControl.pages">
+							<a title="{{item.title}}" href="{{item.hash}}"/><i class="material-icons">{{item.icon}}</i>
+							
+							<span class="title" ng-hide="homeControl.collapse">{{item.title}}</span>
+							</a>
+						</li>	
+					</ul>
+				</div>
 			</div>
 		</div>
 		<!-- sidebar ends -->
