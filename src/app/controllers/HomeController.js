@@ -9,7 +9,8 @@ export default class HomeController {
 	];
 	this.collapse = true;
 	this.notification = [
-	   {title:"Sample notification 1", icon:"sentiment_dissatisfied", isRead:false, timeStamp:"1458646635",shortNote:"simple short note"}
+	   {title:"Sample notification 1", icon:"sentiment_dissatisfied", isRead:false, timeStamp:"1458646635",shortNote:"simple short note"},
+	    {title:"Sample notification 2", icon:"sentiment_dissatisfied", isRead:false, timeStamp:"1458646635",shortNote:"simple short note sdfdf sdfsdfsd sfdsdf"}
 	]
 	
   }

@@ -29,7 +29,11 @@
 							<i class='material-icons'>{{item.icon}}</i>
 						</div>
 						<div class="notification-title">
-							{{item.title}}
+							<div class="heading">{{item.title}}</div>
+							<div class="sub-heading">{{item.shortNote}}</div>
+							<div class="time-ago">
+								<i class="material-icons">access_time</i><span>{{homeControl.getAgoTime(item.timeStamp)}}</span>
+							</div>
 						</div>
 						
 						

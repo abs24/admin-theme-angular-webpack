@@ -191,14 +191,76 @@ a:hover
 .notification
 {
 	height:auto !important;
+	padding: 8px 0;
+	
+}
+.notification:hover
+{
+	background:#f5f5f5;
+}
+.notification:not(:last-child)
+{
+	border-bottom:1px solid #e2e2e2;
 }
 .notification .notification-item-icon
 {
-	flex:0 1 20%;
+	flex:0 5 auto;
 }
 .notification .notification-title
 {
 	font-size:14px;
-	flex:0 4 80%;
+	flex:0 1 auto;
+	word-break: break-all;
+	display:flex;
+	 justify-content: flex-start;
+	 flex-direction:column;
 }
+.notification .notification-title .sub-heading
+{
+	font-size:12px;
+	color:#757575;
+}
+.notification .notification-title .time-ago
+{
+	padding: 3px 0;
+}
+.notification .notification-title .time-ago,
+.notification .notification-title .time-ago span
+{
+	font-size:11px;
+	vertical-align:middle;
+	
+}
+.notification .notification-title .time-ago  .material-icons
+{
+	vertical-align:middle;
+	margin-right:5px;
+	font-size:11px;
+}
+
+
+/* dashboard css  starts */
+.dashboard-num-container
+{
+	display:flex;
+	padding-top:20px;
+	flex-direction:row;
+}
+.dashboard-num-container>div{
+	flex:0 1 33%;
+	text-align:center;
+	font-size:35px;
+	color:#43A047;
+	
+}
+.dashboard-today
+{
+}
+.dashboard-num-container .conversion-text
+{
+	font-size:15px;
+	color:#757575;
+}
+/* dashboard css ends */
+
 
