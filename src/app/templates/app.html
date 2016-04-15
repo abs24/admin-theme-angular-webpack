@@ -1,5 +1,5 @@
 <div class="dashborad-wrapper">
-	<div class="clearfix">
+	<!--<div class="clearfix">
 		<div class="pull-right">
 			<md-button class="md-raised md-ink-ripple md-brown m-light-grey"><i class="fa fa-plus"></i> Create campaign</md-button>
 		</div>
@@ -21,5 +21,55 @@
 			</div>
 		</div>
 	</div>
+	-->
+	<div class="add-product-bar">
+		
+		<md-input-container>
+		 
+		
+		  <input ng-model="DashboardControl.productURL" placeholder="Product URL" type="text">
+		  
+		  
+		</md-input-container>
+		<md-button class="md-raised md-ink-ripple md-brown m-primary md-secondary">Add</md-button>
+		
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<h4 class="dashboard-history-title">
+		Recent <span>(view all)</span>
+	</h4>
+	<div class="row">
+		<div class="col-md-2" ng-repeat="card in DashboardControl.recentFacebookSearch">
+		<md-card>
+			<md-card-header>
+			  <md-card-avatar>
+				<img ng-src="{{card.pageImg}}"/>
+			  </md-card-avatar>
+			  <md-card-header-text>
+				<span class="md-title">{{card.productTitle}}</span>
+				<span class="md-subhead">{{card.store}}</span>
+			  </md-card-header-text>
+			</md-card-header>
 
+			<md-card-title>
+			  <md-card-title-text>
+				
+			  </md-card-title-text>
+			</md-card-title>
+			<md-card-content>
+			  <p>
+				 
+			  </p>
+			</md-card-content>
+		</md-card>
+		</div>  
+  </div>
 </div>

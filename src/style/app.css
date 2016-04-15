@@ -261,6 +261,21 @@ a:hover
 	font-size:15px;
 	color:#757575;
 }
+.dashboard-history-title span
+{
+	color:#999;
+	cursor:pointer;
+	font-size:12px;
+}
+.add-product-bar
+{
+	width: 60%;
+    margin: auto;
+    text-align: center;
+	padding:20px;
+	background:#1565C0;
+	border-radius:5px;
+}
 /* dashboard css ends */
 
 
